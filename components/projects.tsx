@@ -15,7 +15,7 @@ const projects = [
     image: "/portfolio-website-design.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive Design"],
     category: "Web Development",
-    liveUrl: "https://github.com/aryanpundir07/My-Portfolio",
+    liveUrl: "https://project1pundir.vercel.app/",
     githubUrl: "https://github.com/aryanpundir07/My-Portfolio",
   },
 ]
