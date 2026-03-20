@@ -1,173 +1,143 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Download, Eye, ChevronUp } from "lucide-react"
-import { motion } from "framer-motion"
+
+import {
+  ChevronUpIcon,
+  DownloadIcon,
+  EyeIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+} from "@/components/icons"
+import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/lib/site"
+
+const roles = ["Software Engineer", "AI/ML Enthusiast", "Computer Science Student", "Tech Innovator"]
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
-
-  const titles = [
-    "Software Engineer",
-    "AI/ML Enthusiast", 
-    "Computer Science Student",
-    "Tech Innovator"
-  ]
+  const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
     setIsVisible(true)
-    
-    const updateScrollProgress = () => {
-      const scrollTop = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = (scrollTop / docHeight) * 100
-      setScrollProgress(progress)
+
+    const handleScroll = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(total > 0 ? (window.scrollY / total) * 100 : 0)
     }
 
-    window.addEventListener('scroll', updateScrollProgress)
-    return () => window.removeEventListener('scroll', updateScrollProgress)
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length)
-    }, 3000) // Change title every 3 seconds
+    const interval = window.setInterval(() => {
+      setRoleIndex((current) => (current + 1) % roles.length)
+    }, 3000)
 
-    return () => clearInterval(interval)
-  }, [titles.length])
+    return () => window.clearInterval(interval)
+  }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background" />
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+    <section id="home" className="section-shell relative flex min-h-screen items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,color-mix(in_srgb,var(--background)_94%,transparent),color-mix(in_srgb,var(--muted)_52%,transparent))]" />
+
+      <div className="absolute inset-0 opacity-40">
+        <div className="animate-float absolute left-20 top-20 h-72 w-72 rounded-full bg-secondary/10 blur-3xl" />
         <div
-          className="absolute top-40 right-20 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-float"
+          className="animate-float absolute right-20 top-40 h-72 w-72 rounded-full bg-primary/8 blur-3xl"
           style={{ animationDelay: "2s" }}
-        ></div>
+        />
         <div
-          className="absolute -bottom-8 left-40 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-float"
+          className="animate-float absolute -bottom-8 left-40 h-72 w-72 rounded-full bg-accent/8 blur-3xl"
           style={{ animationDelay: "4s" }}
-        ></div>
+        />
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container relative z-10 mx-auto px-6 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
+          <div className="eyebrow mb-6">Portfolio</div>
+
           <div className="mb-8 animate-scale-in">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary p-1 shadow-2xl">
+            <div className="mx-auto h-34 w-34 rounded-full bg-gradient-to-br from-secondary/80 via-primary/60 to-accent/70 p-[2px] shadow-[0_30px_80px_-35px_rgba(3,10,24,0.8)]">
               <img
-                src="/aryan-profile.jpg"
+                src="/aryan.jpeg"
                 alt="Aryan Pundir - Computer Science Student"
-                className="w-full h-full rounded-full object-cover border-4 border-background"
+                className="h-full w-full rounded-full border-[6px] border-background object-cover"
               />
             </div>
           </div>
 
-          <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <h1
+            className="mx-auto mb-6 max-w-5xl text-5xl font-semibold leading-[0.98] text-balance md:text-7xl lg:text-[5.5rem]"
+            style={{ opacity: 1, transform: isVisible ? "translateY(0)" : "translateY(30px)" }}
           >
             <span className="text-gradient">Aryan Pundir</span>
-          </motion.h1>
+          </h1>
 
-          <motion.div 
-            className="mb-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="text-xl md:text-2xl font-medium mb-2 h-8 flex items-center justify-center">
-              <motion.span
-                key={currentTitleIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="text-center text-gradient bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
+          <div className="mb-4" style={{ opacity: 1, transform: isVisible ? "translateY(0)" : "translateY(30px)" }}>
+            <div className="mb-3 flex h-8 items-center justify-center text-xl font-medium md:text-2xl">
+              <span
+                key={roles[roleIndex]}
+                className="animate-fade-in bg-gradient-to-r from-secondary to-primary bg-clip-text text-center text-transparent"
               >
-                {titles[currentTitleIndex]}
-              </motion.span>
+                {roles[roleIndex]}
+              </span>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-              Passionate about AI and Full-Stack Development. I'm a third-year Computer Science Engineering 
-              student with hands-on experience in building real-world solutions.
+
+            <p className="mx-auto max-w-3xl text-lg leading-8 text-muted-foreground text-pretty md:text-[1.18rem]">
+              Passionate about AI and Full-Stack Development. I&apos;m a third-year Computer Science
+              Engineering student with hands-on experience in building real-world solutions.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 mt-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <div
+            className="mb-12 mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            style={{ opacity: 1, transform: isVisible ? "translateY(0)" : "translateY(30px)" }}
           >
-            <Button
-              size="lg"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-3 text-lg font-medium hover-lift group"
+            <button
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              className="hover-lift inline-flex items-center rounded-full bg-secondary px-8 py-3.5 text-base font-medium tracking-wide text-secondary-foreground shadow-[0_20px_45px_-28px_rgba(47,93,149,0.9)]"
             >
-              <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <EyeIcon className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
               View Projects
-            </Button>
-            <Button
-              size="lg"
-              onClick={() => window.open('https://drive.google.com/file/d/18yvq0Ld3e7g7N-1ApCQvEH_9eIyTCWi-/view?usp=drive_link', '_blank')}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-3 text-lg font-medium hover-lift group"
+            </button>
+            <button
+              onClick={() => window.open(RESUME_URL, "_blank")}
+              className="hover-lift inline-flex items-center rounded-full border border-border/75 bg-card/75 px-8 py-3.5 text-base font-medium tracking-wide text-foreground"
             >
-              <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <DownloadIcon className="mr-2 h-5 w-5" />
               Download Resume
-            </Button>
-          </motion.div>
+            </button>
+          </div>
 
-          <motion.div 
-            className="flex justify-center space-x-6 mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+          <div
+            className="mb-12 flex justify-center space-x-4"
+            style={{ opacity: 1, transform: isVisible ? "translateY(0)" : "translateY(30px)" }}
           >
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => window.open('https://github.com/aryanpundir07', '_blank')}
-              className="h-12 w-12 rounded-full hover:bg-secondary/10 hover:text-secondary transition-all duration-300 hover-lift"
-            >
-              <Github className="h-6 w-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => window.open('https://www.linkedin.com/in/aryanpundir07/', '_blank')}
-              className="h-12 w-12 rounded-full hover:bg-secondary/10 hover:text-secondary transition-all duration-300 hover-lift"
-            >
-              <Linkedin className="h-6 w-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => window.open('mailto:infoaryan2025@gmail.com', '_blank')}
-              className="h-12 w-12 rounded-full hover:bg-secondary/10 hover:text-secondary transition-all duration-300 hover-lift"
-            >
-              <Mail className="h-6 w-6" />
-            </Button>
-          </motion.div>
+            <SocialButton href={GITHUB_URL} label="GitHub">
+              <GithubIcon className="h-6 w-6" />
+            </SocialButton>
+            <SocialButton href={LINKEDIN_URL} label="LinkedIn">
+              <LinkedinIcon className="h-6 w-6" />
+            </SocialButton>
+            <SocialButton href={EMAIL_URL} label="Email">
+              <MailIcon className="h-6 w-6" />
+            </SocialButton>
+          </div>
         </div>
 
-        {/* Scroll Progress Meter */}
         <div className="fixed bottom-8 right-8 z-50">
-          <div className="relative w-16 h-16">
-            <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+          <div className="relative h-16 w-16">
+            <svg className="h-16 w-16 -rotate-90 transform" viewBox="0 0 36 36">
               <path
                 className="text-muted-foreground/20"
                 stroke="currentColor"
                 strokeWidth="3"
                 fill="none"
-                d="M18 2.0845
-                  a 15.9155 15.9155 0 0 1 0 31.831
-                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
               />
               <path
                 className="text-secondary transition-all duration-300"
@@ -176,23 +146,39 @@ export function Hero() {
                 fill="none"
                 strokeLinecap="round"
                 strokeDasharray={`${scrollProgress}, 100`}
-                d="M18 2.0845
-                  a 15.9155 15.9155 0 0 1 0 31.831
-                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
               />
             </svg>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="absolute inset-0 h-16 w-16 rounded-full hover:bg-secondary/10 transition-all duration-300"
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="panel-surface absolute inset-0 h-16 w-16 rounded-full transition-all duration-300 hover:bg-secondary/10"
+              aria-label="Scroll to top"
             >
-              <ChevronUp className="h-5 w-5 text-foreground" />
-            </Button>
+              <ChevronUpIcon className="mx-auto h-5 w-5 text-foreground" />
+            </button>
           </div>
         </div>
-
       </div>
     </section>
+  )
+}
+
+function SocialButton({
+  href,
+  label,
+  children,
+}: {
+  href: string
+  label: string
+  children: React.ReactNode
+}) {
+  return (
+    <button
+      onClick={() => window.open(href, "_blank")}
+      aria-label={label}
+      className="hover-lift panel-surface inline-flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 hover:text-secondary"
+    >
+      {children}
+    </button>
   )
 }

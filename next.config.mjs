@@ -1,13 +1,17 @@
+import { fileURLToPath } from "node:url"
+
+const projectRoot = fileURLToPath(new URL(".", import.meta.url))
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     unoptimized: true,
+  },
+  turbopack: {
+    root: projectRoot,
   },
 }
 

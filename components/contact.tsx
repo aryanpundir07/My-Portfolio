@@ -1,35 +1,29 @@
 "use client"
 
-import type React from "react"
+import { useEffect, useRef, useState } from "react"
 
-import { useState, useEffect, useRef } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
-import { useToast } from "@/hooks/use-toast"
+import { MailIcon, MapPinIcon, PhoneIcon, SendIcon } from "@/components/icons"
+import { EMAIL_ADDRESS, LOCATION, PHONE_NUMBER } from "@/lib/site"
 
 export function Contact() {
   const [isVisible, setIsVisible] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState("")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   })
-  const sectionRef = useRef<HTMLElement>(null)
-  const { toast } = useToast()
+  const sectionRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      (entries) => {
+        const [entry] = entries
         if (entry.isIntersecting) {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.2 }
     )
 
     if (sectionRef.current) {
@@ -39,171 +33,141 @@ export function Contact() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      // Simulate API call - replace with actual form submission logic
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-        duration: 5000,
-      })
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      })
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive",
-        duration: 5000,
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target
+    setFormData((current) => ({ ...current, [name]: value }))
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const subject = `Portfolio contact from ${formData.name}`
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      "",
+      "Message:",
+      formData.message,
+    ].join("\n")
+
+    const mailtoUrl = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+    window.location.href = mailtoUrl
+    setMessage("Your email app should open with the message pre-filled. Send it there to reach me.")
   }
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20">
+    <section id="contact" ref={sectionRef} className="section-shell py-24">
       <div className="container mx-auto px-4">
         <div className={`transition-all duration-800 ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
-          <h2 className="text-4xl font-bold text-center mb-8 text-balance">Get In Touch</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">
-            Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing
-            together.
+          <div className="eyebrow mb-4 text-center">Contact</div>
+          <h2 className="section-title mx-auto mb-6 text-center text-4xl font-semibold md:text-5xl">Open to conversations, collaborations, and serious opportunities.</h2>
+          <p className="section-copy mx-auto mb-12 text-center">
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you. Let&apos;s
+            create something amazing together.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Information */}
+          <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
-                  I'm always open to discussing new opportunities, creative projects, or just having a friendly chat
-                  about technology and design.
+                <h3 className="mb-6 text-2xl font-semibold">Let&apos;s Connect</h3>
+                <p className="mb-8 max-w-xl leading-8 text-muted-foreground">
+                  I&apos;m always open to discussing new opportunities, creative projects, or just
+                  having a friendly chat about technology and design.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">infoaryan2025@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+91 8384070477</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Location</p>
-                    <p className="text-muted-foreground">Gurugram, Haryana</p>
-                  </div>
-                </div>
+                <ContactRow icon={<MailIcon className="h-6 w-6 text-primary" />} label="Email" value={EMAIL_ADDRESS} />
+                <ContactRow icon={<PhoneIcon className="h-6 w-6 text-primary" />} label="Phone" value={PHONE_NUMBER} />
+                <ContactRow icon={<MapPinIcon className="h-6 w-6 text-primary" />} label="Location" value={LOCATION} />
               </div>
             </div>
 
-            {/* Contact Form */}
-            <Card className="animate-scale-in">
-              <CardHeader>
-                <CardTitle>Send a Message</CardTitle>
-                <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Your full name"
-                      required
-                      className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-                    />
-                  </div>
+            <div className="panel-surface rounded-[1.8rem] p-8 md:p-10">
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your full name"
+                    className="h-11 w-full rounded-xl border border-border/75 bg-background/55 px-4 py-2 text-base outline-none transition-all duration-200 focus:border-secondary/45 focus:ring-2 focus:ring-primary/12"
+                  />
+                </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="your.email@example.com"
-                      required
-                      className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-                    />
-                  </div>
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-medium">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your.email@example.com"
+                    className="h-11 w-full rounded-xl border border-border/75 bg-background/55 px-4 py-2 text-base outline-none transition-all duration-200 focus:border-secondary/45 focus:ring-2 focus:ring-primary/12"
+                  />
+                </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me about your project or just say hello!"
-                      rows={5}
-                      required
-                      className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-                    />
-                  </div>
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell me about your project or just say hello!"
+                    className="min-h-16 w-full rounded-xl border border-border/75 bg-background/55 px-4 py-3 text-base outline-none transition-all duration-200 focus:border-secondary/45 focus:ring-2 focus:ring-primary/12"
+                  />
+                </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full group" 
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                <button
+                  type="submit"
+                  className="hover-lift inline-flex w-full items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-medium tracking-wide text-secondary-foreground transition-all shadow-[0_20px_45px_-30px_rgba(47,93,149,0.9)]"
+                >
+                  <SendIcon className="mr-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Send Message
+                </button>
+
+                {message ? <p className="text-sm text-primary">{message}</p> : null}
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function ContactRow({
+  icon,
+  label,
+  value,
+}: {
+  icon: React.ReactNode
+  label: string
+  value: string
+}) {
+  return (
+    <div className="panel-surface flex items-center space-x-4 rounded-2xl px-4 py-4">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10">{icon}</div>
+      <div>
+        <p className="font-medium">{label}</p>
+        <p className="text-muted-foreground">{value}</p>
+      </div>
+    </div>
   )
 }

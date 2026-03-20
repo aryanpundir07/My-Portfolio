@@ -1,41 +1,41 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
-import { motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+
+import { ExternalLinkIcon, GithubIcon } from "@/components/icons"
+import { GITHUB_PORTFOLIO_URL, LIVE_PORTFOLIO_URL } from "@/lib/site"
+
+const categories = ["All", "Web Development"]
 
 const projects = [
   {
     id: 1,
     title: "My Portfolio Website",
-    description: "A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features smooth animations with Framer Motion, dark/light theme support, and mobile-first responsive design.",
+    description:
+      "A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features smooth animations with Framer Motion, dark/light theme support, and mobile-first responsive design.",
     image: "/portfolio-website-design.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive Design"],
     category: "Web Development",
-    liveUrl: "https://project1pundir.vercel.app/",
-    githubUrl: "https://github.com/aryanpundir07/My-Portfolio",
+    liveUrl: LIVE_PORTFOLIO_URL,
+    githubUrl: GITHUB_PORTFOLIO_URL,
   },
 ]
 
-const categories = ["All", "Web Development"]
-
 export function Projects() {
   const [isVisible, setIsVisible] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [activeCategory, setActiveCategory] = useState("All")
+  const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const sectionRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      (entries) => {
+        const [entry] = entries
         if (entry.isIntersecting) {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.2 }
     )
 
     if (sectionRef.current) {
@@ -46,98 +46,120 @@ export function Projects() {
   }, [])
 
   const filteredProjects =
-    selectedCategory === "All" ? projects : projects.filter((project) => project.category === selectedCategory)
+    activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section id="projects" ref={sectionRef} className="py-20">
+    <section id="projects" ref={sectionRef} className="section-shell py-24">
       <div className="container mx-auto px-4">
         <div className={`transition-all duration-800 ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
-          <h2 className="text-4xl font-bold text-center mb-8 text-balance">Featured Projects</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">
-            Here are some of my recent projects that showcase my skills and passion for creating exceptional digital
-            experiences.
+          <div className="eyebrow mb-4 text-center">Projects</div>
+          <h2 className="section-title mx-auto mb-6 text-center text-4xl font-semibold md:text-5xl">Selected work with a strong product presentation.</h2>
+          <p className="section-copy mx-auto mb-12 text-center">
+            Here are some of my recent projects that showcase my skills and passion for creating
+            exceptional digital experiences.
           </p>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="mb-12 flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
-                className="transition-all duration-200"
+                onClick={() => setActiveCategory(category)}
+                className={`rounded-md px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                  activeCategory === category
+                    ? "rounded-full bg-primary px-5 text-primary-foreground shadow-[0_18px_40px_-26px_rgba(23,32,51,0.7)]"
+                    : "rounded-full border border-border/80 bg-background/70 px-5 hover:border-secondary/40 hover:bg-card hover:text-accent-foreground"
+                }`}
               >
                 {category}
-              </Button>
+              </button>
             ))}
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project, index) => (
-              <motion.div
+              <div
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? "translateY(0)" : "translateY(30px)",
+                  transition: `all 0.6s ease ${index * 100}ms`,
+                }}
               >
-                <Card
-                  className="group cursor-pointer card-hover"
-                  onMouseEnter={() => setHoveredProject(project.id)}
-                  onMouseLeave={() => setHoveredProject(null)}
+                <article
+                  className="panel-surface card-hover group cursor-pointer rounded-[1.6rem] py-6"
+                  onMouseEnter={() => setHoveredId(project.id)}
+                  onMouseLeave={() => setHoveredId(null)}
                 >
-                <CardHeader className="p-0">
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className={`w-full h-48 object-cover transition-transform duration-300 ${
-                        hoveredProject === project.id ? "scale-110" : "scale-100"
-                      }`}
-                    />
-                    <div
-                      className={`absolute inset-0 bg-primary/80 flex items-center justify-center gap-4 transition-opacity duration-300 ${
-                        hoveredProject === project.id ? "opacity-100" : "opacity-0"
-                      }`}
-                    >
-                      <Button 
-                        size="icon" 
-                        variant="secondary"
-                        onClick={() => window.open(project.liveUrl, '_blank')}
-                        className="hover:scale-110 transition-transform"
+                  <div className="p-0">
+                    <div className="relative overflow-hidden rounded-t-lg">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className={`h-48 w-full object-cover transition-transform duration-300 ${
+                          hoveredId === project.id ? "scale-110" : "scale-100"
+                        }`}
+                      />
+                      <div
+                        className={`absolute inset-0 flex items-center justify-center gap-4 bg-[linear-gradient(180deg,rgba(16,32,59,0.18),rgba(16,32,59,0.82))] transition-opacity duration-300 ${
+                          hoveredId === project.id ? "opacity-100" : "opacity-0"
+                        }`}
                       >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                      {project.githubUrl && (
-                        <Button 
-                          size="icon" 
-                          variant="secondary"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                          className="hover:scale-110 transition-transform"
+                        <IconActionButton
+                          label="Open project"
+                          onClick={() => window.open(project.liveUrl, "_blank")}
                         >
-                          <Github className="h-4 w-4" />
-                        </Button>
-                      )}
+                          <ExternalLinkIcon className="h-4 w-4" />
+                        </IconActionButton>
+                        <IconActionButton
+                          label="Open GitHub repository"
+                          onClick={() => window.open(project.githubUrl, "_blank")}
+                        >
+                          <GithubIcon className="h-4 w-4" />
+                        </IconActionButton>
+                      </div>
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <CardTitle className="mb-2">{project.title}</CardTitle>
-                  <CardDescription className="mb-4 text-pretty">{project.description}</CardDescription>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
+
+                  <div className="p-6">
+                    <h3 className="mb-2 text-xl font-semibold leading-none">{project.title}</h3>
+                    <p className="mb-4 text-sm leading-7 text-muted-foreground text-pretty">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-secondary/10 bg-secondary/12 px-3 py-1 text-xs font-medium text-foreground"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </CardContent>
-                </Card>
-              </motion.div>
+                </article>
+              </div>
             ))}
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function IconActionButton({
+  children,
+  label,
+  onClick,
+}: {
+  children: React.ReactNode
+  label: string
+  onClick: () => void
+}) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={label}
+      className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-secondary text-secondary-foreground transition-transform hover:scale-110"
+    >
+      {children}
+    </button>
   )
 }

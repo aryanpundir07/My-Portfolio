@@ -1,10 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin } from "lucide-react"
-import { motion } from "framer-motion"
+
+import { CalendarIcon, MapPinIcon } from "@/components/icons"
 
 const experiences = [
   {
@@ -16,7 +14,7 @@ const experiences = [
     description: [
       "Worked on a commerce-focused web platform at Deutsche Telekom Digital Labs as a Summer Intern.",
       "Collaborated in a 5-member agile team to build and test modules for product recommendations and cart functionalities.",
-      "Gained exposure to professional workflows, including daily meets, Git-based version control, and stakeholder demos."
+      "Gained exposure to professional workflows, including daily meets, Git-based version control, and stakeholder demos.",
     ],
     skills: ["Generative AI", "Agile", "Git", "Team Collaboration", "Product Development"],
   },
@@ -25,22 +23,22 @@ const experiences = [
 export function Experience() {
   const [isVisible, setIsVisible] = useState(false)
   const [visibleItems, setVisibleItems] = useState<number[]>([])
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      (entries) => {
+        const [entry] = entries
         if (entry.isIntersecting) {
           setIsVisible(true)
-          // Animate items one by one
           experiences.forEach((_, index) => {
-            setTimeout(() => {
-              setVisibleItems((prev) => [...prev, index])
-            }, index * 200)
+            window.setTimeout(() => {
+              setVisibleItems((current) => [...current, index])
+            }, 200 * index)
           })
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.2 }
     )
 
     if (sectionRef.current) {
@@ -51,75 +49,70 @@ export function Experience() {
   }, [])
 
   return (
-    <section id="experience" ref={sectionRef} className="py-20 bg-muted/30">
+    <section id="experience" ref={sectionRef} className="section-shell bg-muted/30 py-24">
       <div className="container mx-auto px-4">
         <div className={`transition-all duration-800 ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
-          <h2 className="text-4xl font-bold text-center mb-8 text-balance">Experience</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">
+          <div className="eyebrow mb-4 text-center">Experience</div>
+          <h2 className="section-title mx-auto mb-6 text-center text-4xl font-semibold md:text-5xl">Hands-on experience in collaborative software delivery.</h2>
+          <p className="section-copy mx-auto mb-12 text-center">
             My professional journey and the experiences that have shaped my skills and expertise.
           </p>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="mx-auto max-w-4xl">
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" />
+              <div className="absolute bottom-0 left-4 top-0 w-0.5 bg-border" />
 
               {experiences.map((experience, index) => (
-                <motion.div
+                <div
                   key={experience.id}
                   className="relative mb-12"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={visibleItems.includes(index) ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  style={{
+                    opacity: visibleItems.includes(index) ? 1 : 0,
+                    transform: visibleItems.includes(index) ? "translateX(0)" : "translateX(-50px)",
+                    transition: `all 0.8s ease ${index * 200}ms`,
+                  }}
                 >
-                  {/* Timeline dot */}
-                  <div className="absolute left-2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                  <div className="absolute left-2 h-4 w-4 rounded-full border-4 border-background bg-primary" />
 
                   <div className="ml-12">
-                    <Card className="group card-hover">
-                      <CardHeader>
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
-                          <Badge variant="outline" className="w-fit">
-                            <Calendar className="h-3 w-3 mr-1" />
+                    <article className="panel-surface card-hover group rounded-[1.6rem] py-6">
+                      <div className="px-6">
+                        <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center">
+                          <span className="inline-flex w-fit items-center rounded-full border border-border/80 bg-background/60 px-3 py-1 text-xs font-medium">
+                            <CalendarIcon className="mr-1 h-3 w-3" />
                             {experience.period}
-                          </Badge>
-                          <Badge variant="outline" className="w-fit">
-                            <MapPin className="h-3 w-3 mr-1" />
+                          </span>
+                          <span className="inline-flex w-fit items-center rounded-full border border-border/80 bg-background/60 px-3 py-1 text-xs font-medium">
+                            <MapPinIcon className="mr-1 h-3 w-3" />
                             {experience.location}
-                          </Badge>
+                          </span>
                         </div>
-                        <CardTitle className="text-xl">{experience.title}</CardTitle>
-                        <CardDescription className="text-lg font-medium text-primary">
-                          {experience.company}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="text-muted-foreground mb-4 leading-relaxed space-y-2">
-                          {Array.isArray(experience.description) ? (
-                            experience.description.map((item, idx) => (
-                              <li key={idx} className="flex items-start">
-                                <span className="text-secondary mr-2 mt-1">•</span>
-                                <span>{item}</span>
-                              </li>
-                            ))
-                          ) : (
-                            <li className="flex items-start">
-                              <span className="text-secondary mr-2 mt-1">•</span>
-                              <span>{experience.description}</span>
+
+                        <h3 className="text-xl font-semibold">{experience.title}</h3>
+                        <p className="text-lg font-medium text-secondary">{experience.company}</p>
+                      </div>
+
+                      <div className="px-6">
+                        <ul className="mb-4 space-y-2 leading-relaxed text-muted-foreground">
+                          {experience.description.map((item) => (
+                            <li key={item} className="flex items-start">
+                              <span className="mr-2 mt-1 text-secondary">•</span>
+                              <span>{item}</span>
                             </li>
-                          )}
+                          ))}
                         </ul>
+
                         <div className="flex flex-wrap gap-2">
                           {experience.skills.map((skill) => (
-                            <Badge key={skill} variant="secondary">
+                            <span key={skill} className="rounded-full border border-secondary/10 bg-secondary/12 px-3 py-1 text-xs font-medium text-foreground">
                               {skill}
-                            </Badge>
+                            </span>
                           ))}
                         </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </article>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
