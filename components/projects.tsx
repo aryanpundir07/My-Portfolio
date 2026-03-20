@@ -13,7 +13,7 @@ const projects = [
     title: "My Portfolio Website",
     description:
       "A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features smooth animations with Framer Motion, dark/light theme support, and mobile-first responsive design.",
-    image: "/portfolio-website-design.png",
+    image: "/screenshot.jpeg",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive Design"],
     category: "Web Development",
     liveUrl: LIVE_PORTFOLIO_URL,
