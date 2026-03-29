@@ -26,6 +26,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/aryanpundir07/My-Portfolio/tree/master/0021-merge-two-sorted-lists) |
+| [0061-rotate-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0061-rotate-list) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
 ## Recursion
 |  |
@@ -36,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
+| [0061-rotate-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0061-rotate-list) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
 ## Stack
 |  |
