@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0032-longest-valid-parentheses](https://github.com/aryanpundir07/My-Portfolio/tree/master/0032-longest-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
+| [0072-edit-distance](https://github.com/aryanpundir07/My-Portfolio/tree/master/0072-edit-distance) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Binary Indexed Tree
 |  |
@@ -49,6 +50,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0032-longest-valid-parentheses](https://github.com/aryanpundir07/My-Portfolio/tree/master/0032-longest-valid-parentheses) |
+| [0072-edit-distance](https://github.com/aryanpundir07/My-Portfolio/tree/master/0072-edit-distance) |
 ## Matrix
 |  |
 | ------- |
