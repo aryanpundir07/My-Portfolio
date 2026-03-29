@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
+| [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
 | [0054-spiral-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0054-spiral-matrix) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Dynamic Programming
@@ -58,4 +59,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
+## Backtracking
+|  |
+| ------- |
+| [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
 <!---LeetCode Topics End-->
