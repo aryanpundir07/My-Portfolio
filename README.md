@@ -4,12 +4,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0054-spiral-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0054-spiral-matrix) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [0032-longest-valid-parentheses](https://github.com/aryanpundir07/My-Portfolio/tree/master/0032-longest-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Binary Indexed Tree
 |  |
@@ -32,11 +34,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
 ## Stack
 |  |
 | ------- |
 | [0032-longest-valid-parentheses](https://github.com/aryanpundir07/My-Portfolio/tree/master/0032-longest-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
 ## String
 |  |
@@ -50,4 +54,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0054-spiral-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0054-spiral-matrix) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 <!---LeetCode Topics End-->
