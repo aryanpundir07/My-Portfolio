@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-    bool BS(vector<vector<int>>& mat, int target,int row)
+    bool BS(vector<vector<int>>& mat, int target, int row)
     {
         int n=mat[0].size();
 
@@ -11,12 +11,11 @@ public:
         while(st<=end)
         {
             int mid=st+(end-st)/2;
-
             if(target==mat[row][mid])
             {
                 return true;
             }
-            else if(target>mat[row][mid])
+            else if(target>=mat[row][mid])
             {
                 st=mid+1;
             }
@@ -26,7 +25,7 @@ public:
             }
         }
         return false;
-    } 
+    }
 
     bool searchMatrix(vector<vector<int>>& mat, int target)
     {
@@ -44,7 +43,7 @@ public:
             {
                 return BS(mat,target,mr);
             }
-            else if(target>=mat[mr][n-1])
+            else if(target>mat[mr][n-1])
             {
                 sr=mr+1;
             }
