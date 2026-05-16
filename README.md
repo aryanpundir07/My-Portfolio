@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0001-two-sum) |
 | [0031-next-permutation](https://github.com/aryanpundir07/My-Portfolio/tree/master/0031-next-permutation) |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
@@ -102,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0001-two-sum) |
 | [0567-permutation-in-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0567-permutation-in-string) |
 ## Sliding Window
 |  |
