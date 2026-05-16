@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0977-squares-of-a-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0977-squares-of-a-sorted-array) |
+| [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -81,6 +82,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0054-spiral-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0054-spiral-matrix) |
 | [0074-search-a-2d-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0074-search-a-2d-matrix) |
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
+| [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
 ## Simulation
 |  |
 | ------- |
@@ -105,6 +107,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0001-two-sum) |
 | [0567-permutation-in-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0567-permutation-in-string) |
+| [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
 ## Sliding Window
 |  |
 | ------- |
@@ -115,6 +118,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0007-reverse-integer](https://github.com/aryanpundir07/My-Portfolio/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0009-palindrome-number) |
 | [0204-count-primes](https://github.com/aryanpundir07/My-Portfolio/tree/master/0204-count-primes) |
+| [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
 ## Enumeration
 |  |
 | ------- |
