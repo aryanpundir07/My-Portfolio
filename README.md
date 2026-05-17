@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0088-merge-sorted-array) |
 | [0204-count-primes](https://github.com/aryanpundir07/My-Portfolio/tree/master/0204-count-primes) |
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
+| [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0977-squares-of-a-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0977-squares-of-a-sorted-array) |
 | [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
@@ -54,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0125-valid-palindrome](https://github.com/aryanpundir07/My-Portfolio/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0151-reverse-words-in-a-string) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
+| [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
 | [0344-reverse-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0344-reverse-string) |
 | [0443-string-compression](https://github.com/aryanpundir07/My-Portfolio/tree/master/0443-string-compression) |
 | [0567-permutation-in-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0567-permutation-in-string) |
@@ -132,8 +134,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0074-search-a-2d-matrix) |
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
+| [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
 ## Divide and Conquer
 |  |
 | ------- |
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
 <!---LeetCode Topics End-->
