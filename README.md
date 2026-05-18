@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0001-two-sum) |
+| [0015-3sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0015-3sum) |
 | [0031-next-permutation](https://github.com/aryanpundir07/My-Portfolio/tree/master/0031-next-permutation) |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
@@ -47,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0015-3sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0015-3sum) |
 | [0031-next-permutation](https://github.com/aryanpundir07/My-Portfolio/tree/master/0031-next-permutation) |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0061-rotate-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0061-rotate-list) |
@@ -101,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0015-3sum) |
 | [0075-sort-colors](https://github.com/aryanpundir07/My-Portfolio/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0088-merge-sorted-array) |
 | [0977-squares-of-a-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0977-squares-of-a-sorted-array) |
