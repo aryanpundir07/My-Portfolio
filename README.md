@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0204-count-primes](https://github.com/aryanpundir07/My-Portfolio/tree/master/0204-count-primes) |
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
 | [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
+| [0560-subarray-sum-equals-k](https://github.com/aryanpundir07/My-Portfolio/tree/master/0560-subarray-sum-equals-k) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0977-squares-of-a-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0977-squares-of-a-sorted-array) |
 | [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
@@ -114,6 +115,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/aryanpundir07/My-Portfolio/tree/master/0001-two-sum) |
+| [0560-subarray-sum-equals-k](https://github.com/aryanpundir07/My-Portfolio/tree/master/0560-subarray-sum-equals-k) |
 | [0567-permutation-in-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0567-permutation-in-string) |
 | [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
 ## Sliding Window
@@ -149,4 +151,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
+## Prefix Sum
+|  |
+| ------- |
+| [0560-subarray-sum-equals-k](https://github.com/aryanpundir07/My-Portfolio/tree/master/0560-subarray-sum-equals-k) |
 <!---LeetCode Topics End-->
