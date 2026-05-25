@@ -27,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0032-longest-valid-parentheses](https://github.com/aryanpundir07/My-Portfolio/tree/master/0032-longest-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0072-edit-distance](https://github.com/aryanpundir07/My-Portfolio/tree/master/0072-edit-distance) |
+| [0509-fibonacci-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0509-fibonacci-number) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/aryanpundir07/My-Portfolio/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Binary Indexed Tree
 |  |
@@ -47,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/aryanpundir07/My-Portfolio/tree/master/0021-merge-two-sorted-lists) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
+| [0509-fibonacci-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0509-fibonacci-number) |
 ## Two Pointers
 |  |
 | ------- |
@@ -128,6 +130,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0007-reverse-integer](https://github.com/aryanpundir07/My-Portfolio/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0009-palindrome-number) |
 | [0204-count-primes](https://github.com/aryanpundir07/My-Portfolio/tree/master/0204-count-primes) |
+| [0509-fibonacci-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0509-fibonacci-number) |
 | [2965-find-missing-and-repeated-values](https://github.com/aryanpundir07/My-Portfolio/tree/master/2965-find-missing-and-repeated-values) |
 ## Enumeration
 |  |
@@ -155,4 +158,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/aryanpundir07/My-Portfolio/tree/master/0560-subarray-sum-equals-k) |
+## Memoization
+|  |
+| ------- |
+| [0509-fibonacci-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0509-fibonacci-number) |
 <!---LeetCode Topics End-->
