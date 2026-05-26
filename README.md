@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0054-spiral-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0054-spiral-matrix) |
 | [0074-search-a-2d-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0074-search-a-2d-matrix) |
 | [0075-sort-colors](https://github.com/aryanpundir07/My-Portfolio/tree/master/0075-sort-colors) |
+| [0078-subsets](https://github.com/aryanpundir07/My-Portfolio/tree/master/0078-subsets) |
 | [0088-merge-sorted-array](https://github.com/aryanpundir07/My-Portfolio/tree/master/0088-merge-sorted-array) |
 | [0204-count-primes](https://github.com/aryanpundir07/My-Portfolio/tree/master/0204-count-primes) |
 | [0240-search-a-2d-matrix-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0240-search-a-2d-matrix-ii) |
@@ -105,6 +106,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
+| [0078-subsets](https://github.com/aryanpundir07/My-Portfolio/tree/master/0078-subsets) |
 ## Sorting
 |  |
 | ------- |
@@ -153,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/aryanpundir07/My-Portfolio/tree/master/0078-subsets) |
 | [0287-find-the-duplicate-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0287-find-the-duplicate-number) |
 ## Prefix Sum
 |  |
