@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0031-next-permutation](https://github.com/aryanpundir07/My-Portfolio/tree/master/0031-next-permutation) |
 | [0042-trapping-rain-water](https://github.com/aryanpundir07/My-Portfolio/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
+| [0051-n-queens](https://github.com/aryanpundir07/My-Portfolio/tree/master/0051-n-queens) |
 | [0054-spiral-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0054-spiral-matrix) |
 | [0074-search-a-2d-matrix](https://github.com/aryanpundir07/My-Portfolio/tree/master/0074-search-a-2d-matrix) |
 | [0075-sort-colors](https://github.com/aryanpundir07/My-Portfolio/tree/master/0075-sort-colors) |
@@ -107,6 +108,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0046-permutations](https://github.com/aryanpundir07/My-Portfolio/tree/master/0046-permutations) |
+| [0051-n-queens](https://github.com/aryanpundir07/My-Portfolio/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/aryanpundir07/My-Portfolio/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0090-subsets-ii) |
 ## Sorting
