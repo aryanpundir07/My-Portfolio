@@ -46,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0021-merge-two-sorted-lists](https://github.com/aryanpundir07/My-Portfolio/tree/master/0021-merge-two-sorted-lists) |
 | [0061-rotate-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0061-rotate-list) |
 | [0234-palindrome-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0234-palindrome-linked-list) |
+| [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0430-flatten-a-multilevel-doubly-linked-list) |
 ## Recursion
 |  |
 | ------- |
@@ -170,4 +171,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0509-fibonacci-number](https://github.com/aryanpundir07/My-Portfolio/tree/master/0509-fibonacci-number) |
+## Depth-First Search
+|  |
+| ------- |
+| [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0430-flatten-a-multilevel-doubly-linked-list) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0430-flatten-a-multilevel-doubly-linked-list) |
 <!---LeetCode Topics End-->
