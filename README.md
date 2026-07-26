@@ -179,8 +179,25 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0430-flatten-a-multilevel-doubly-linked-list) |
+| [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
 ## Doubly-Linked List
 |  |
 | ------- |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0430-flatten-a-multilevel-doubly-linked-list) |
+## Tree
+|  |
+| ------- |
+| [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
+## String Matching
+|  |
+| ------- |
+| [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
+## Hash Function
+|  |
+| ------- |
+| [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
 <!---LeetCode Topics End-->
