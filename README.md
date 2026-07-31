@@ -89,6 +89,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0072-edit-distance](https://github.com/aryanpundir07/My-Portfolio/tree/master/0072-edit-distance) |
 | [0125-valid-palindrome](https://github.com/aryanpundir07/My-Portfolio/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0151-reverse-words-in-a-string) |
+| [0257-binary-tree-paths](https://github.com/aryanpundir07/My-Portfolio/tree/master/0257-binary-tree-paths) |
 | [0344-reverse-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0344-reverse-string) |
 | [0443-string-compression](https://github.com/aryanpundir07/My-Portfolio/tree/master/0443-string-compression) |
 | [0567-permutation-in-string](https://github.com/aryanpundir07/My-Portfolio/tree/master/0567-permutation-in-string) |
@@ -116,6 +117,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/aryanpundir07/My-Portfolio/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/aryanpundir07/My-Portfolio/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/aryanpundir07/My-Portfolio/tree/master/0090-subsets-ii) |
+| [0257-binary-tree-paths](https://github.com/aryanpundir07/My-Portfolio/tree/master/0257-binary-tree-paths) |
 ## Sorting
 |  |
 | ------- |
@@ -180,6 +182,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0100-same-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0100-same-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0257-binary-tree-paths](https://github.com/aryanpundir07/My-Portfolio/tree/master/0257-binary-tree-paths) |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/aryanpundir07/My-Portfolio/tree/master/0430-flatten-a-multilevel-doubly-linked-list) |
 | [0543-diameter-of-binary-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
@@ -192,6 +195,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0100-same-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0100-same-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0257-binary-tree-paths](https://github.com/aryanpundir07/My-Portfolio/tree/master/0257-binary-tree-paths) |
 | [0543-diameter-of-binary-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
 ## String Matching
@@ -203,6 +207,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0100-same-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0100-same-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0257-binary-tree-paths](https://github.com/aryanpundir07/My-Portfolio/tree/master/0257-binary-tree-paths) |
 | [0543-diameter-of-binary-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/aryanpundir07/My-Portfolio/tree/master/0572-subtree-of-another-tree) |
 ## Hash Function
