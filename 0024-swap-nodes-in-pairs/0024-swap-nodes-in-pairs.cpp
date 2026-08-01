@@ -16,7 +16,6 @@ public:
         {
             return head;
         }
-
         ListNode* prev=NULL;
         ListNode* first=head;
         ListNode* second=head->next;
